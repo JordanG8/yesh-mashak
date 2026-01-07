@@ -1,0 +1,16 @@
+/**
+ * סגנונות לקומפוננטת HistoryList
+ */
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-empty {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+}

@@ -1,0 +1,52 @@
+/**
+ * סגנונות לקומפוננטת CurrentStatus
+ */
+
+.current-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.status-time,
+.status-countdown {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.time-label,
+.countdown-label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.time-value {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.countdown-value {
+  font-family: 'Courier New', monospace;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-yes);
+  background-color: var(--color-bg-card);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (min-width: 480px) {
+  .current-status {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

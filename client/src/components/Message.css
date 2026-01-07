@@ -1,0 +1,80 @@
+/**
+ * סגנונות לקומפוננטת Message
+ */
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  animation: slideIn var(--transition-normal) forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Types */
+.message-success {
+  background-color: var(--color-yes-light);
+  color: var(--color-yes-dark);
+  border: 1px solid var(--color-yes);
+}
+
+.message-error {
+  background-color: var(--color-no-light);
+  color: var(--color-no-dark);
+  border: 1px solid var(--color-no);
+}
+
+.message-warning {
+  background-color: #FFF3E0;
+  color: #E65100;
+  border: 1px solid #FF9800;
+}
+
+.message-info {
+  background-color: #E3F2FD;
+  color: #1565C0;
+  border: 1px solid #2196F3;
+}
+
+/* Icon */
+.message-icon {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Text */
+.message-text {
+  flex: 1;
+  font-size: var(--font-size-sm);
+}
+
+/* Close button */
+.message-close {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+  border-radius: var(--radius-sm);
+}
+
+.message-close:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}

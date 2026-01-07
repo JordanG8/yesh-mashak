@@ -1,0 +1,77 @@
+/**
+ * משתני CSS גלובליים
+ * צבעים, גדלים, מרווחים ועוד
+ */
+
+:root {
+  /* צבעים ראשיים */
+  --color-yes: #4CAF50;
+  --color-yes-dark: #388E3C;
+  --color-yes-light: #C8E6C9;
+  --color-no: #f44336;
+  --color-no-dark: #D32F2F;
+  --color-no-light: #FFCDD2;
+
+  /* צבעי רקע */
+  --color-bg: #f5f5f5;
+  --color-bg-card: #ffffff;
+  --color-bg-hover: #eeeeee;
+
+  /* צבעי טקסט */
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-text-muted: #999999;
+
+  /* צבעים נוספים */
+  --color-border: #e0e0e0;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-tie: #FF9800;
+
+  /* גופנים */
+  --font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* גדלי גופן */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 2rem;     /* 32px */
+
+  /* משקלי גופן */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* מרווחים */
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-2xl: 3rem;    /* 48px */
+
+  /* רדיוסים */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* צלליות */
+  --shadow-sm: 0 1px 2px var(--color-shadow);
+  --shadow-md: 0 2px 4px var(--color-shadow);
+  --shadow-lg: 0 4px 8px var(--color-shadow);
+  --shadow-xl: 0 8px 16px var(--color-shadow);
+
+  /* טרנזישנים */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* רוחב מקסימלי */
+  --max-width: 600px;
+}
