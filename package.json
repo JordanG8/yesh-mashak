@@ -1,31 +1,34 @@
 {
   "name": "yesh-mashak",
   "version": "1.0.0",
-  "description": "מערכת לדיווח על משמעת בכניסה לבסיס צבאי",
+  "description": "Yesh Mashak voting system",
   "main": "server/src/server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
-    "install:client": "cd client && npm install",
-    "install:server": "cd server && npm install",
-    "install:all": "npm run install:client && npm run install:server",
+    "postinstall": "cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "start": "node server/src/server.js",
     "dev:client": "cd client && npm run dev",
-    "dev:server": "cd server && npm run dev",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "build:client": "cd client && npm run build",
-    "build:server": "cd server && npm run build",
-    "build": "npm run build:client && npm run build:server",
-    "start": "cd server && npm start",
-    "deploy": "npm run build && npm run start"
+    "dev:server": "cd server && npm run dev"
   },
   "keywords": [
     "voting",
-    "military",
-    "react",
     "express",
+    "react",
     "mysql"
   ],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "compression": "^1.7.4",
+    "express-validator": "^7.0.1"
   }
 }
