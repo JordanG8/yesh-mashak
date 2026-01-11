@@ -20,15 +20,5 @@
     "mysql"
   ],
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.18.2",
-    "mysql2": "^3.6.5",
-    "dotenv": "^16.3.1",
-    "cors": "^2.8.5",
-    "helmet": "^7.1.0",
-    "express-rate-limit": "^7.1.5",
-    "compression": "^1.7.4",
-    "express-validator": "^7.0.1"
-  }
+  "license": "MIT"
 }
