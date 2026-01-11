@@ -10,6 +10,11 @@ import VoteBar from '../components/VoteBar'
 import VoteButtons from '../components/VoteButtons'
 import CurrentStatus from '../components/CurrentStatus'
 import Message from '../components/Message'
+import SecurityIcon from '@mui/icons-material/Security'
+import HistoryIcon from '@mui/icons-material/History'
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import HowToVoteIcon from '@mui/icons-material/HowToVote'
+import GroupIcon from '@mui/icons-material/Group'
 import './Home.css'
 
 function Home() {
@@ -73,14 +78,24 @@ function Home() {
   return (
     <div className="home-page">
       <div className="container">
-        {/* Header */}
-        <header className="home-header">
-          <h1>יש משק?</h1>
-          <p className="subtitle">דווח האם יש משמעת בכניסה לבסיס</p>
+        {/* Hero Section */}
+        <header className="home-header" role="banner">
+          <div className="hero-badge" aria-hidden="true">
+            <SecurityIcon className="badge-icon" />
+          </div>
+          <h1 className="main-title">דיווח על מש"ק משמעת</h1>
+          <p className="subtitle-large">דווח בזמן אמת האם יש מש"ק משמעת בכניסה לבסיס</p>
+          <div className="info-box">
+            <p className="info-text">
+              <strong>מה זה?</strong> אפליקציה לדיווח קהילתי על נוכחות מש"ק משמעת בכניסה לבסיס.
+              <br />
+              הצבע עכשיו ועזור לחבריך לדעת מה מצפה להם!
+            </p>
+          </div>
         </header>
 
         {/* Main card */}
-        <main className="card main-card">
+        <main className="card main-card" role="main" aria-label="אזור הצבעה ראשי">
           {/* Current status */}
           <CurrentStatus
             slotTime={data?.slot_time}
@@ -116,16 +131,32 @@ function Home() {
         </main>
 
         {/* History link */}
-        <nav className="home-nav">
-          <Link to="/history" className="history-link">
-            צפה בהיסטוריה
+        <nav className="home-nav" role="navigation" aria-label="ניווט משני">
+          <Link to="/history" className="history-link" aria-label="עבור לעמוד היסטוריה">
+            <HistoryIcon className="nav-icon" />
+            <span>צפה בהיסטוריה מלאה</span>
           </Link>
         </nav>
 
         {/* Footer */}
-        <footer className="home-footer">
-          <p>התקופה מתחלפת כל 10 דקות</p>
-          <p>ניתן להצביע פעם אחת בכל תקופה</p>
+        <footer className="home-footer" role="contentinfo">
+          <div className="footer-rules">
+            <h3 className="footer-title">כללי השימוש:</h3>
+            <ul className="footer-list">
+              <li>
+                <AccessTimeIcon className="footer-icon" />
+                <span>התקופה מתחלפת כל 10 דקות</span>
+              </li>
+              <li>
+                <HowToVoteIcon className="footer-icon" />
+                <span>ניתן להצביע פעם אחת בכל תקופה</span>
+              </li>
+              <li>
+                <GroupIcon className="footer-icon" />
+                <span>הדיווחים אנונימיים ומשותפים לכלל המשתמשים</span>
+              </li>
+            </ul>
+          </div>
         </footer>
       </div>
     </div>

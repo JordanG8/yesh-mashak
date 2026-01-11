@@ -7,22 +7,85 @@
   padding: var(--spacing-lg) 0;
 }
 
-/* Header */
+/* Header - Hero Section */
 .home-header {
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
-.home-header h1 {
-  font-size: var(--font-size-3xl);
+/* Hero Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.badge-icon {
+  font-size: 40px !important;
+  color: white;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Main Title */
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
   color: var(--color-text);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.home-header .subtitle {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-muted);
+/* Subtitle */
+.subtitle-large {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  margin: 0 0 var(--spacing-lg) 0;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Info Box */
+.info-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-right: 4px solid var(--color-yes);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: right;
+}
+
+.info-text {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
   margin: 0;
+  line-height: 1.6;
+}
+
+.info-text strong {
+  color: var(--color-yes-dark);
+  font-size: 1.1rem;
 }
 
 /* Main card */
@@ -78,7 +141,9 @@
 }
 
 .history-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
   padding: var(--spacing-sm) var(--spacing-lg);
   background-color: var(--color-bg-card);
   border-radius: var(--radius-md);
@@ -93,14 +158,118 @@
   text-decoration: none;
 }
 
+.nav-icon {
+  font-size: 20px !important;
+  color: var(--color-text-light);
+}
+
 /* Footer */
 .home-footer {
   text-align: center;
-  margin-top: var(--spacing-xl);
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
-.home-footer p {
-  margin: var(--spacing-xs) 0;
+.footer-rules {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.footer-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  color: var(--color-text-light);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.footer-list li:last-child {
+  border-bottom: none;
+}
+
+.footer-icon {
+  font-size: 20px !important;
+  color: var(--color-yes);
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle-large {
+    font-size: 1.1rem;
+  }
+
+  .hero-badge {
+    width: 60px;
+    height: 60px;
+  }
+
+  .badge-icon {
+    font-size: 30px !important;
+  }
+
+  .home-header {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .info-box {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .info-text {
+    font-size: var(--font-size-sm);
+  }
+
+  .footer-icon,
+  .nav-icon {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle-large {
+    font-size: 1rem;
+  }
+
+  .hero-badge {
+    width: 50px;
+    height: 50px;
+  }
+
+  .badge-icon {
+    font-size: 24px !important;
+  }
+
+  .footer-icon,
+  .nav-icon {
+    font-size: 16px !important;
+  }
 }
